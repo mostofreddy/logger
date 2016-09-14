@@ -73,7 +73,7 @@ class Logger implements LoggerInterface
      *
      * @return string
      */
-    protected function generateUid()
+    protected function generateUid():string
     {
         return md5(date('YmdHij'));
     }
@@ -87,11 +87,11 @@ class Logger implements LoggerInterface
      * 
      * @param int    $level   Log Level
      * @param string $message Mensaje
-     * @param array  $context Contecto
+     * @param array  $context Contexto
      * 
      * @return Logger
      */
-    public function log($level, $message, array $context = array())
+    public function log($level, string $message, array $context = array()):Logger
     {
         $msg = $this->formatMessage($level, $message, $context);
         foreach ($this->handlers as $handler) {
@@ -107,9 +107,9 @@ class Logger implements LoggerInterface
      * @param string $message Mensaje
      * @param array  $context Contecto
      * 
-     * @return Logger
+     * @return string
      */
-    public function formatMessage($level, $message, array $context = array())
+    public function formatMessage($level, string $message, array $context = array()):string
     {
 
         $dateTime = new \DateTime();

@@ -45,7 +45,7 @@ trait LogLevelTrait
      *
      * @return string cadena vacia si el nivel solicitado no existe
      */
-    public function getLogLevelName($level)
+    public function getLogLevelName($level):string
     {
         return isset(self::$levels[$level])?self::$levels[$level]:'';
     }

@@ -59,9 +59,9 @@ class File extends AbstractHandler
      * @throws FileNotWritableException      Cuando el archivo de salida del handler File existe y no tiene permisos de escritura
      * @throws DirOutputNotWritableException Cuando el directorio de salida del handler File existe y no tiene permisos de escritura
      * 
-     * @return void
+     * @return bool
      */
-    protected function validateOutput()
+    protected function validateOutput():bool
     {
         $dir = dirname($this->output);
 
@@ -72,6 +72,7 @@ class File extends AbstractHandler
         if (is_file($this->output) && !is_writable($this->output)) {
             throw new FileNotWritableException();
         }
+        return true;
     }
     /**
      * Escribe el mensaje en la salida
