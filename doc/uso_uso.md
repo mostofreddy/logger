@@ -1,8 +1,10 @@
-Tutorial
-========
+Uso
+===
+
 
 Cómo loguear en distintos canales
----------------------------------
+----------------------------------
+
 
 ```
 $handlerFileDebug = (new File(Logger::DEBUG))->config(['output' => '/tmp', 'fileName' => 'debug']);
