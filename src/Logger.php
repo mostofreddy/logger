@@ -91,7 +91,7 @@ class Logger implements LoggerInterface
      * 
      * @return Logger
      */
-    public function log($level, string $message, array $context = array()):Logger
+    public function log($level, $message, array $context = array()):Logger
     {
         $msg = $this->formatMessage($level, $message, $context);
         foreach ($this->handlers as $handler) {
