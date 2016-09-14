@@ -1,0 +1,10 @@
+# composer
+vendor
+composer.lock
+
+# Unit tests
+tests/coverage
+
+# QA
+phpunit.xml
+phpcs.ruleset.xml

@@ -1,0 +1,23 @@
+<phpunit bootstrap="tests/bootstrap.php">
+    <testsuites>
+        <!-- Suite test -->
+        <testsuite name="AllTests">
+            <directory>tests/src</directory>
+        </testsuite>
+    </testsuites>
+
+    <!-- files to covered -->
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src/</directory>
+            <exclude>
+                <directory suffix=".php">./tests/</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+
+    <!-- logs -->
+    <logging>
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="true"/>
+    </logging>
+</phpunit>
