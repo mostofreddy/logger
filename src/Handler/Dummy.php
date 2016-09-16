@@ -7,25 +7,25 @@
  * Copyright (c) 2016 Federico Lozada Mosto <mosto.federico@gmail.com>
  * For the full copyright and license information, please view the LICENSE file that was distributed with this source code.
  *
- * @category  Mostofreddy\Logger
- * @package   Mostofreddy\Logger\Handler
+ * @category  Mostofreddy\Loggy
+ * @package   Mostofreddy\Loggy\Handler
  * @author    Federico Lozada Mosto <mosto.federico@gmail.com>
  * @copyright 2016 Federico Lozada Mosto <mosto.federico@gmail.com>
  * @license   MIT License (http://www.opensource.org/licenses/mit-license.php)
  * @link      http://www.mostofreddy.com.ar
  */
-namespace Mostofreddy\Logger\Handler;
+namespace Mostofreddy\Loggy\Handler;
 
-use Mostofreddy\Logger\Handler\AbstractHandler;
-use Mostofreddy\Logger\Exception\DirOutputNotWritableException;
-use Mostofreddy\Logger\Exception\FileNotWritableException;
+use Mostofreddy\Loggy\Handler\AbstractHandler;
+use Mostofreddy\Loggy\Exception\DirOutputNotWritableException;
+use Mostofreddy\Loggy\Exception\FileNotWritableException;
 /**
  * Dummy
  *
  * No escribe en ningún lado
  *
- * @category  Mostofreddy\Logger
- * @package   Mostofreddy\Logger\Handler
+ * @category  Mostofreddy\Loggy
+ * @package   Mostofreddy\Loggy\Handler
  * @author    Federico Lozada Mosto <mosto.federico@gmail.com>
  * @copyright 2016 Federico Lozada Mosto <mosto.federico@gmail.com>
  * @license   MIT License (http://www.opensource.org/licenses/mit-license.php)

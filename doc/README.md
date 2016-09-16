@@ -13,4 +13,4 @@ Tabla de contenidos
     * [Excepciones](uso_excepciones.md)
 * QATools
     * [Test unitarios](phpunit.md)
-    * [CÃ³digo estandar](phpcs.md)
+    * [Código estandar](phpcs.md)

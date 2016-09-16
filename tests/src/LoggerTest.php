@@ -7,25 +7,25 @@
  * Copyright (c) 2016 Federico Lozada Mosto <mosto.federico@gmail.com>
  * For the full copyright and license information, please view the LICENSE file that was distributed with this source code.
  *
- * @category  Mostofreddy\Logger
- * @package   Mostofreddy\Logger\Tests
+ * @category  Mostofreddy\Loggy
+ * @package   Mostofreddy\Loggy\Tests
  * @author    Federico Lozada Mosto <mosto.federico@gmail.com>
  * @copyright 2016 Federico Lozada Mosto <mosto.federico@gmail.com>
  * @license   MIT License (http://www.opensource.org/licenses/mit-license.php)
  * @link      http://www.mostofreddy.com.ar
  */
-namespace Mostofreddy\Logger\Tests;
+namespace Mostofreddy\Loggy\Tests;
 
-use Mostofreddy\Logger\Logger;
-use Mostofreddy\Logger\Handler\Dummy;
+use Mostofreddy\Loggy\Logger;
+use Mostofreddy\Loggy\Handler\Dummy;
 // PSR
 use Psr\Log\LoggerInterface;
 
 /**
  * LoggerTest
  *
- * @category  Mostofreddy\Logger
- * @package   Mostofreddy\Logger\Tests
+ * @category  Mostofreddy\Loggy
+ * @package   Mostofreddy\Loggy\Tests
  * @author    Federico Lozada Mosto <mosto.federico@gmail.com>
  * @copyright 2016 Federico Lozada Mosto <mosto.federico@gmail.com>
  * @license   MIT License (http://www.opensource.org/licenses/mit-license.php)

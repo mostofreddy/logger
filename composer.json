@@ -16,8 +16,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "Mostofreddy\\Logger\\": "src/",
-            "Mostofreddy\\Logger\\Tests\\": "tests/src/"
+            "Mostofreddy\\Loggy\\": "src/",
+            "Mostofreddy\\Loggy\\Tests\\": "tests/src/"
         }
     },
     "require": {
