@@ -16,6 +16,7 @@
  */
 namespace Mostofreddy\Logger;
 
+// Logger
 use Mostofreddy\Logger\LogLevelTrait;
 use Mostofreddy\Logger\LoggerTrait;
 // PSR
