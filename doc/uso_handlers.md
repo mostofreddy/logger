@@ -3,9 +3,9 @@ Handlers
 
 | Namespace | Class | Descripción |
 |---|---|---|---|---|
-| \Mostofreddy\Logger\Handler | Screen | Escribe el log en pantalla |
-| \Mostofreddy\Logger\Handler | File | Escribe el log en un archivo físico |
-| \Mostofreddy\Logger\Handler | Dummy | No escribe en ningún lado |
+| \Mostofreddy\Loggy\Handler | Screen | Escribe el log en pantalla |
+| \Mostofreddy\Loggy\Handler | File | Escribe el log en un archivo físico |
+| \Mostofreddy\Loggy\Handler | Dummy | No escribe en ningún lado |
 
 
 
@@ -13,8 +13,8 @@ Screen
 ------
 
 ```
-use Mostofreddy\Logger\Logger;
-use Mostofreddy\Logger\Handler\Screen;
+use Mostofreddy\Loggy\Logger;
+use Mostofreddy\Loggy\Handler\Screen;
 
 $handlerScreen = new Screen(Logger::DEBUG);
 
@@ -28,13 +28,13 @@ File
 
 | Parametro | Descripción |
 |---|---|
-| \Mostofreddy\Logger\Handler | Screen | Escribe el log en pantalla |
-| \Mostofreddy\Logger\Handler | File | Escribe el log en un archivo físico |
-| \Mostofreddy\Logger\Handler | Dummy | No escribe en ningún lado |
+| \Mostofreddy\Loggy\Handler | Screen | Escribe el log en pantalla |
+| \Mostofreddy\Loggy\Handler | File | Escribe el log en un archivo físico |
+| \Mostofreddy\Loggy\Handler | Dummy | No escribe en ningún lado |
 
 ```
-use Mostofreddy\Logger\Logger;
-use Mostofreddy\Logger\Handler\File;
+use Mostofreddy\Loggy\Logger;
+use Mostofreddy\Loggy\Handler\File;
 
 $handlerFile = (new File(Logger::DEBUG))->config(['output' => '/tmp','fileName' => 'tracking']);
 
@@ -45,8 +45,8 @@ Dummy
 ------
 
 ```
-use Mostofreddy\Logger\Logger;
-use Mostofreddy\Logger\Handler\Dummy;
+use Mostofreddy\Loggy\Logger;
+use Mostofreddy\Loggy\Handler\Dummy;
 
 $handlerDummy = new Dummy(Logger::DEBUG);
 

@@ -6,19 +6,19 @@ La libería lanza las siguientes excepciones
 
 | Namespace | Class | Descripción |
 |---|---|---|---|---|
-| \Mostofreddy\Logger\Exception | DirOutputNotWritableException | Cuando el directorio de salida del handler File existe y no tiene permisos de escritura |
-| \Mostofreddy\Logger\Exception | FileNotWritableException | Cuando el archivo de salida del handler File existe y no tiene permisos de escritura |
-| \Mostofreddy\Logger\Handler | Dummy | No escribe en ningún lado |
+| \Mostofreddy\Loggy\Exception | DirOutputNotWritableException | Cuando el directorio de salida del handler File existe y no tiene permisos de escritura |
+| \Mostofreddy\Loggy\Exception | FileNotWritableException | Cuando el archivo de salida del handler File existe y no tiene permisos de escritura |
+| \Mostofreddy\Loggy\Handler | Dummy | No escribe en ningún lado |
 
 
 __Ejemplo__
 
 
 ```
-use Mostofreddy\Logger\Handler\File;
-use Mostofreddy\Logger\Exception\DirOutputNotWritableException;
-use Mostofreddy\Logger\Exception\LoggerException;
-use Mostofreddy\Logger\Looger;
+use Mostofreddy\Loggy\Handler\File;
+use Mostofreddy\Loggy\Exception\DirOutputNotWritableException;
+use Mostofreddy\Loggy\Exception\LoggerException;
+use Mostofreddy\Loggy\Looger;
 
 # Para capturar una excepción en particular
 

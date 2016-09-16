@@ -3,10 +3,10 @@ Niveles de logs
 
 | Nivel | Variable |
 |---|---|
-| EMERGENCY | \Mostofreddy\Logger\Logger:EMERGENCY |
-| ALERT | \Mostofreddy\Logger\Logger:ALERT |
-| CRITICAL | \Mostofreddy\Logger\Logger:CRITICAL |
-| WARNING | \Mostofreddy\Logger\Logger:WARNING |
-| NOTICE | \Mostofreddy\Logger\Logger:NOTICE |
-| INFO | \Mostofreddy\Logger\Logger:INFO |
-| Debug | \Mostofreddy\Logger\Logger:DEBUG |
+| EMERGENCY | \Mostofreddy\Loggy\Logger:EMERGENCY |
+| ALERT | \Mostofreddy\Loggy\Logger:ALERT |
+| CRITICAL | \Mostofreddy\Loggy\Logger:CRITICAL |
+| WARNING | \Mostofreddy\Loggy\Logger:WARNING |
+| NOTICE | \Mostofreddy\Loggy\Logger:NOTICE |
+| INFO | \Mostofreddy\Loggy\Logger:INFO |
+| Debug | \Mostofreddy\Loggy\Logger:DEBUG |

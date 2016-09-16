@@ -4,8 +4,8 @@
  *
  * PHP version 5.3
  *
- * @category  Logger
- * @package   Logger
+ * @category  Loggy
+ * @package   Loggy
  * @author    Federico Lozada Mosto <federico.mosto@intraway.com>
  * @copyright 2015 Intraway Corp.
  * @license   Intraway Corp. <http://www.intraway.com>
@@ -14,9 +14,9 @@
 
 require_once "../vendor/autoload.php";
 
-use Mostofreddy\Logger\Logger;
-use Mostofreddy\Logger\Handler\Screen;
-use Mostofreddy\Logger\Handler\File;
+use Mostofreddy\Loggy\Logger;
+use Mostofreddy\Loggy\Handler\Screen;
+use Mostofreddy\Loggy\Handler\File;
 
 $handlerScreen = new Screen(Logger::DEBUG);
 $handlerFile = (new File(Logger::DEBUG))->config(['output' => '/tmp']);

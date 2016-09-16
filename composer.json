@@ -1,8 +1,8 @@
 {
-    "name": "mostofreddy/logger",
+    "name": "mostofreddy/loggy",
     "description": "Simple logger para todo tipo de aplicaciones PHP",
     "version": "1.0.0",
-    "keywords": ["logger", "log", "logging", "psr-3"],
+    "keywords": ["logger", "log", "logging", "psr-3", "loggy"],
     "homepage": "https://github.com/mostofreddy/logger",
     "type": "library",
     "license": "MIT",
