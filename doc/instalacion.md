@@ -17,7 +17,7 @@ Luego ejecutar `composer install` o `composer update`.
 ## Instalacion para desarrollo
 
 ```
-git clone git@github.com:mostofreddy/logger.git
-cd logger
+git clone git@github.com:mostofreddy/loggy.git
+cd loggy
 composer install
 ```
