@@ -76,7 +76,8 @@ class Logger implements LoggerInterface
      */
     protected function generateUid():string
     {
-        return md5(date('YmdHij'));
+        $now = \DateTime::createFromFormat('U.u', microtime(true), $this->timezone);
+        return md5($now->format("Y-m-d\TH:i:s.uO"));
     }
 
     /********************************************************************************
