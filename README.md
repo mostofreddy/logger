@@ -7,7 +7,12 @@ Logger
 [![Latest Unstable Version](https://poser.pugx.org/mostofreddy/logger/v/unstable.svg)](https://packagist.org/mostofreddy/logger)
 [![License](https://poser.pugx.org/mostofreddy/logger/license.svg)](https://packagist.org/packages/mostofreddy/logger)
 
-Simple logger para todo tipo de aplicaciones PHP
+Logger simple y liviano para cualquier proyecto o framework PHP.
+
+Requerimientos
+--------------
+
+* PHP 7+
 
 Versión
 -------
