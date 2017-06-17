@@ -1,15 +1,18 @@
 <?php
 /**
- * Test
+ * Simple example
  *
- * PHP version 5.3
+ * PHP version 7+
  *
- * @category  Loggy
- * @package   Loggy
- * @author    Federico Lozada Mosto <federico.mosto@intraway.com>
- * @copyright 2015 Intraway Corp.
- * @license   Intraway Corp. <http://www.intraway.com>
- * @link      http://www.intraway.com
+ * Copyright (c) 2016 Federico Lozada Mosto <mosto.federico@gmail.com>
+ * For the full copyright and license information, please view the LICENSE file that was distributed with this source code.
+ *
+ * @category  Mostofreddy\Loggy
+ * @package   Mostofreddy\Loggy
+ * @author    Federico Lozada Mosto <mosto.federico@gmail.com>
+ * @copyright 2016 Federico Lozada Mosto <mosto.federico@gmail.com>
+ * @license   MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @link      http://www.mostofreddy.com.ar
  */
 
 require_once "../vendor/autoload.php";
@@ -18,10 +21,10 @@ use Mostofreddy\Loggy\Logger;
 use Mostofreddy\Loggy\Handler\Screen;
 use Mostofreddy\Loggy\Handler\File;
 
-$handlerScreen = new Screen(Logger::DEBUG);
 $handlerFile = (new File(Logger::DEBUG))->config(['output' => '/tmp']);
 
+$default = Logger::get('default', [$handlerFile]);
+$dummy = Logger::get('dummy', [$handlerFile]);
 
-$logger = new Logger("mychannel", [$handlerScreen, $handlerFile, $handlerFile]);
-
-$logger->notice("mensaje de alerta", ['file' => "/tmp/asdasd", "line"=> 45]);
+$default->debug("default ".rand());
+$dummy->debug("dummy ".rand());
