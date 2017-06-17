@@ -6,7 +6,7 @@ Instalación
 ```
 {
     "require": {
-        "mostofreddy/loggy": "1.0.*"
+        "mostofreddy/loggy": "1.1.*"
     }
 }
 ```

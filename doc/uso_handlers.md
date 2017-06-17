@@ -18,7 +18,7 @@ use Mostofreddy\Loggy\Handler\Screen;
 
 $handlerScreen = new Screen(Logger::DEBUG);
 
-$logger = new Logger("mychannel", [$handlerScreen]);
+$logger = Logger::get("mychannel", [$handlerScreen]);
 ```
 
 File
@@ -38,7 +38,7 @@ use Mostofreddy\Loggy\Handler\File;
 
 $handlerFile = (new File(Logger::DEBUG))->config(['output' => '/tmp','fileName' => 'tracking']);
 
-$logger = new Logger("mychannel", [$handlerFile]);
+$logger = Logger::get("mychannel", [$handlerFile]);
 ```
 
 Dummy
@@ -50,5 +50,5 @@ use Mostofreddy\Loggy\Handler\Dummy;
 
 $handlerDummy = new Dummy(Logger::DEBUG);
 
-$logger = new Logger("mychannel", [$handlerDummy]);
+$logger = Logger::get("mychannel", [$handlerDummy]);
 ```
