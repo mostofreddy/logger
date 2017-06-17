@@ -1,6 +1,5 @@
 # composer
 vendor
-composer.lock
 
 # Unit tests
 tests/coverage
