@@ -74,7 +74,7 @@ class Logger implements LoggerInterface
      *
      * @return string
      */
-    protected static function generateUid():string
+    public static function generateUid():string
     {
         static $uid = null;
         if ($uid === null) {
