@@ -1,6 +1,10 @@
 Changelog
 =========
 
+__1.1.2__
+
+* Change: visiblidad del metodo generateuid
+
 __1.1.0__
 
 * Change - Instanciación de Logger
