@@ -3,9 +3,9 @@ Logger
 
 [![Build Status](https://travis-ci.org/mostofreddy/loggy.svg?branch=master)](https://travis-ci.org/mostofreddy/loggy)
 [![Latest Stable Version](https://poser.pugx.org/mostofreddy/loggy/v/stable.svg)](https://packagist.org/packages/mostofreddy/loggy)
-[![Total Downloads](https://poser.pugx.org/mostofreddy/loggy/downloads.svg)](https://packagist.org/packages/mostofreddy/loggy)
-[![Latest Unstable Version](https://poser.pugx.org/mostofreddy/loggy/v/unstable.svg)](https://packagist.org/mostofreddy/loggy)
 [![License](https://poser.pugx.org/mostofreddy/loggy/license.svg)](https://packagist.org/packages/mostofreddy/loggy)
+[![Total Downloads](https://poser.pugx.org/mostofreddy/loggy/downloads.svg)](https://packagist.org/packages/mostofreddy/loggy)
+[![composer.lock](https://poser.pugx.org/mostofreddy/loggy/composerlock)](https://packagist.org/packages/mostofreddy/loggy)
 
 Logger simple y liviano para cualquier proyecto o framework PHP.
 
