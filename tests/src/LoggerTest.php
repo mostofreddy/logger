@@ -20,6 +20,8 @@ use Mostofreddy\Loggy\Logger;
 use Mostofreddy\Loggy\Handler\Dummy;
 // PSR
 use Psr\Log\LoggerInterface;
+// PHPUnit
+use PHPUnit\Framework\TestCase;
 
 /**
  * LoggerTest
@@ -31,7 +33,7 @@ use Psr\Log\LoggerInterface;
  * @license   MIT License (http://www.opensource.org/licenses/mit-license.php)
  * @link      http://www.mostofreddy.com.ar
  */
-class LoggerTest extends \PHPUnit_Framework_TestCase
+class LoggerTest extends TestCase
 {
     protected static $logger = null;
     protected static $channel = 'mychannel';
@@ -50,105 +52,76 @@ class LoggerTest extends \PHPUnit_Framework_TestCase
     public static function setUpBeforeClass()
     {
         static::$handlers = [new Dummy(static::$level)];
-        static::$logger = new Logger(static::$channel, static::$handlers);
     }
     /**
-     * Testea el metodo constructor
+     * Test get method
      * 
      * @return void
      */
-    public function testConstruct()
+    public function testGet()
     {
-        $logger = static::$logger;
+        $logger = Logger::get("myChannel", static::$handlers);
+        $this->assertInstanceOf('\Mostofreddy\Loggy\Logger', $logger);
+    }
+    /**
+     * Test generateUid method. Testea que devuelva el mismo uid en invocaciones sucesivas
+     * 
+     * @return void
+     */
+    public function testGenerateUidEquals()
+    {
+        $ref = new \ReflectionMethod('\Mostofreddy\Loggy\Logger', 'generateUid');
+        $ref->setAccessible(true);
+        $uid1 = $ref->invoke(null);
+        $uid2 = $ref->invoke(null);
+        $this->assertEquals($uid1, $uid2);
+        $this->assertEquals(32, strlen($uid2));
+    }
+    /**
+     * Test generateUid method.
+     * 
+     * @return void
+     */
+    public function testGenerateUidLength()
+    {
+        $ref = new \ReflectionMethod('\Mostofreddy\Loggy\Logger', 'generateUid');
+        $ref->setAccessible(true);
+        $uid = $ref->invoke(null);
+        $this->assertEquals(32, strlen($uid));
+    }
+    /**
+     * Test setUid method
+     * 
+     * @return void
+     */
+    public function testSetUid()
+    {
+        $logger = Logger::get("myChannel", static::$handlers);
 
-        $this->assertAttributeEquals(static::$channel, 'channel', $logger);
-        $this->assertAttributeNotEquals('', 'uid', $logger);
+        $ref = new \ReflectionMethod('\Mostofreddy\Loggy\Logger', 'generateUid');
+        $ref->setAccessible(true);
+        $uid = $ref->invoke(null);
+
+        $this->assertAttributeEquals($uid, 'uid', $logger);
+    }
+    /**
+     * Test setHandlers method
+     * 
+     * @return void
+     */
+    public function testSetHandlers()
+    {
+        $logger = Logger::get("myChannel", static::$handlers);
         $this->assertAttributeEquals(static::$handlers, 'handlers', $logger);
-        $this->assertAttributeInstanceOf('\DateTimeZone', 'timezone', $logger);
     }
-
     /**
-     * Testea el metodo generateUid
-     *
-     * @depends testConstruct
+     * Test setChannel method
      * 
      * @return void
      */
-    public function testGenerateUid() 
+    public function testSetChannel()
     {
-        $logger = static::$logger;
-
-        $ref = new \ReflectionMethod(Logger::CLASS, 'generateUid');
-        $ref->setAccessible(true);
-        $r = $ref->invoke($logger);
-        $this->assertEquals(32, strlen($r));
-    }
-    /**
-     * Testea el metodo formatMessage
-     *
-     * @depends testConstruct
-     * 
-     * @return void
-     */
-    public function testFormatMessageHeader()
-    {
-        $logger = static::$logger;
-
-        $ref = new \ReflectionMethod(Logger::CLASS, 'formatMessage');
-        $ref->setAccessible(true);
-        $r = $ref->invokeArgs($logger, [Logger::DEBUG, static::$message, static::$context]);
-        list($header, $message, $context) = explode(" - ", $r);
-
-        //header
-        $headerSegments = explode(" ", $header);
-        //level
-        $this->assertEquals($logger->getLogLevelName(Logger::DEBUG), $headerSegments[1]);
-        //channel
-        $this->assertEquals("@".static::$channel, $headerSegments[2]);
-        //uid
-        $this->assertEquals(36, strlen($headerSegments[3]));
-
-    }
-
-    /**
-     * Testea el metodo formatMessage
-     *
-     * @depends testConstruct
-     * 
-     * @return void
-     */
-    public function testFormatMessageMessage()
-    {
-        $logger = static::$logger;
-
-        $ref = new \ReflectionMethod(Logger::CLASS, 'formatMessage');
-        $ref->setAccessible(true);
-        $r = $ref->invokeArgs($logger, [Logger::DEBUG, static::$message, static::$context]);
-        list($header, $message, $context) = explode(" - ", $r);
-
-        
-        //message
-        $this->assertEquals(static::$message, $message);
-
-    }
-
-    /**
-     * Testea el metodo formatMessage
-     *
-     * @depends testConstruct
-     * 
-     * @return void
-     */
-    public function testFormatMessageContext()
-    {
-        $logger = static::$logger;
-
-        $ref = new \ReflectionMethod(Logger::CLASS, 'formatMessage');
-        $ref->setAccessible(true);
-        $r = $ref->invokeArgs($logger, [Logger::DEBUG, static::$message, static::$context]);
-        list($header, $message, $context) = explode(" - ", $r);
-        
-        //context
-        $this->assertEquals(json_encode(static::$context), $context);
+        $logger = Logger::get("myChannel", static::$handlers);
+        $this->assertAttributeEquals("myChannel", 'channel', $logger);
     }
 }
