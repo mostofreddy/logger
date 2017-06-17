@@ -48,25 +48,25 @@ class Logger implements LoggerInterface
 
     protected $uid = '';
     protected $handlers = [];
-    protected $channel = '';
-    protected $timezone = null;
 
     /********************************************************************************
      * Constructor
      *******************************************************************************/
 
     /**
-     * Constructor
-     *
-     * @param string $channel  Nombre del canal
-     * @param array  $handlers Colección de handlers para el canal. Defecto: []
+     * Construye un logger
+     * 
+     * @param string $channel  [description]
+     * @param [type] $handlers [description]
+     * 
+     * @return [type]           [description]
      */
-    public function __construct(string $channel, array $handlers = [])
+    public static function get(string $channel, array $handlers)
     {
-        $this->channel = $channel;
-        $this->uid = $this->generateUid();
-        $this->handlers = $handlers;
-        $this->timezone = new \DateTimeZone('UTC');
+        $logger = new static();
+        return $logger->setUid(static::generateUid())
+            ->setHandlers($handlers)
+            ->setChannel($channel);
     }
 
     /**
@@ -74,10 +74,68 @@ class Logger implements LoggerInterface
      *
      * @return string
      */
-    protected function generateUid():string
+    protected static function generateUid():string
     {
-        $now = \DateTime::createFromFormat('U.u', microtime(true), $this->timezone);
-        return md5($now->format("Y-m-d\TH:i:s.uO"));
+        static $uid = null;
+        if ($uid === null) {
+            $now = \DateTime::createFromFormat('U.u', microtime(true), static::timezone());
+            $uid = md5($now->format("Y-m-d\TH:i:s.uO"));
+        }
+        return $uid;
+    }
+
+    /**
+     * Devuelve el timezone
+     * 
+     * @return \DateTimeZone
+     */
+    protected static function timezone()
+    {
+        static $timezone = null;
+        if ($timezone == null) {
+            $timezone = new \DateTimeZone('UTC');
+        }
+        return $timezone;
+    }
+
+    /********************************************************************************
+     * Setters 
+     *******************************************************************************/
+    /**
+     * Setea el uid
+     * 
+     * @param string $uid UID
+     *
+     * @return self
+     */
+    public function setUid(string $uid)
+    {
+        $this->uid = $uid;
+        return $this;
+    }
+    /**
+     * Setea el nombre del canal, nombre del logger
+     * 
+     * @param string $channel Nombre
+     *
+     * @return self
+     */
+    public function setChannel(string $channel)
+    {
+        $this->channel = $channel;
+        return $this;
+    }
+    /**
+     * Setea los distintos handlers para el logger
+     * 
+     * @param array $handlers Array de handlers
+     *
+     * @return self
+     */
+    public function setHandlers(array $handlers)
+    {
+        $this->handlers = $handlers;
+        return $this;
     }
 
     /********************************************************************************
@@ -115,7 +173,7 @@ class Logger implements LoggerInterface
     {
 
         $dateTime = new \DateTime();
-        $dateTime->setTimezone($this->timezone);
+        $dateTime->setTimezone(static::timezone());
         return $dateTime->format('[c]')
             ." ".$this->getLogLevelName($level)
             ." @".$this->channel
