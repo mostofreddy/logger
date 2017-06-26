@@ -3,6 +3,7 @@ vendor
 
 # Unit tests
 tests/coverage
+clover.xml
 
 # QA
 phpunit.xml
