@@ -58,7 +58,7 @@ class LoggerTest extends TestCase
      * 
      * @return void
      */
-    public function testGet()
+    public function xtestGet()
     {
         $logger = Logger::get("myChannel", static::$handlers);
         $this->assertInstanceOf('\Mostofreddy\Loggy\Logger', $logger);
@@ -68,7 +68,7 @@ class LoggerTest extends TestCase
      * 
      * @return void
      */
-    public function xtestGenerateUidEquals()
+    public function testGenerateUidEquals()
     {
         $ref = new \ReflectionMethod('\Mostofreddy\Loggy\Logger', 'generateUid');
         $ref->setAccessible(true);
