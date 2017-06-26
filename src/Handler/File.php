@@ -40,8 +40,8 @@ class File extends AbstractHandler
      * Configura el handler
      * 
      * @param array $config Configuración.
-     *                          + [output] => directorio de salida. Defecto: /tmp
-     *                          + [fileName] => nombre del archivo del log. Defecto: log
+     *                      + [output] => directorio de salida. Defecto: /tmp
+     *                      + [fileName] => nombre del archivo del log. Defecto: log
      * 
      * @return AbstractHandler
      */
