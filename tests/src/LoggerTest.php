@@ -36,7 +36,7 @@ use PHPUnit\Framework\TestCase;
 class LoggerTest extends TestCase
 {
     protected static $logger = null;
-    protected static $channel = 'mychannel';
+    protected static $channel = 'mychannels';
     protected static $level = Logger::DEBUG;
     protected static $handlers = [];
     protected static $message = 'my custom message';
