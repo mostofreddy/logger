@@ -10,7 +10,7 @@
  * @category  Mostofreddy\Loggy
  * @package   Mostofreddy\Loggy
  * @author    Federico Lozada Mosto <mosto.federico@gmail.com>
- * @copyright 2016 Federico Lozada Mosto <mosto.federico@gmail.com>
+ * @copyright 2017 Federico Lozada Mosto <mosto.federico@gmail.com>
  * @license   MIT License (http://www.opensource.org/licenses/mit-license.php)
  * @link      http://www.mostofreddy.com.ar
  */
