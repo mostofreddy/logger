@@ -1,6 +1,12 @@
 Changelog
 =========
 
+__1.1.3__
+
+
+* Task: Integración con Codecov
+* Task: Integración con Scrutizer-CI
+
 __1.1.2__
 
 * Change: visiblidad del metodo generateuid

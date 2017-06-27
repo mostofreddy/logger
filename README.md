@@ -17,7 +17,7 @@ Requerimientos
 Versión
 -------
 
-__1.1.2__
+__1.1.3__
 
 Documentación
 -------
