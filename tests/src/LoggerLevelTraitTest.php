@@ -47,4 +47,17 @@ class LoggerLevelTraitTest extends TestCase
 
         $this->assertEquals("EMERGENCY", $level);
     }
+
+    /**
+     * Test getLogLevelName - Alert
+     * 
+     * @return void
+     */
+    public function testGetLogLevelNameAlert()
+    {
+        $logger = new Logger;
+        $level = $logger->getLogLevelName(Logger::ALERT);
+
+        $this->assertEquals("ALERT", $level);
+    }
 }
