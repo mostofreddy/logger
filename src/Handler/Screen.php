@@ -7,23 +7,24 @@
  * Copyright (c) 2016 Federico Lozada Mosto <mosto.federico@gmail.com>
  * For the full copyright and license information, please view the LICENSE file that was distributed with this source code.
  *
- * @category  Mostofreddy\Loggy
- * @package   Mostofreddy\Loggy\Handler
+ * @category  Loggy
+ * @package   Loggy\Handler
  * @author    Federico Lozada Mosto <mosto.federico@gmail.com>
  * @copyright 2016 Federico Lozada Mosto <mosto.federico@gmail.com>
  * @license   MIT License (http://www.opensource.org/licenses/mit-license.php)
  * @link      http://www.mostofreddy.com.ar
  */
-namespace Mostofreddy\Loggy\Handler;
+namespace Resty\Loggy\Handler;
 
-use Mostofreddy\Loggy\Handler\AbstractHandler;
+use Resty\Loggy\Handler\AbstractHandler;
+
 /**
  * Screen
  *
  * Escribe el log en pantalla
  *
- * @category  Mostofreddy\Loggy
- * @package   Mostofreddy\Loggy\Handler
+ * @category  Loggy
+ * @package   Loggy\Handler
  * @author    Federico Lozada Mosto <mosto.federico@gmail.com>
  * @copyright 2016 Federico Lozada Mosto <mosto.federico@gmail.com>
  * @license   MIT License (http://www.opensource.org/licenses/mit-license.php)
