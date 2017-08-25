@@ -7,17 +7,17 @@
  * Copyright (c) 2016 Federico Lozada Mosto <mosto.federico@gmail.com>
  * For the full copyright and license information, please view the LICENSE file that was distributed with this source code.
  *
- * @category  Mostofreddy\Loggy
- * @package   Mostofreddy\Loggy\Tests
+ * @category  Loggy
+ * @package   Loggy\Tests
  * @author    Federico Lozada Mosto <mosto.federico@gmail.com>
  * @copyright 2016 Federico Lozada Mosto <mosto.federico@gmail.com>
  * @license   MIT License (http://www.opensource.org/licenses/mit-license.php)
  * @link      http://www.mostofreddy.com.ar
  */
-namespace Mostofreddy\Loggy\Tests;
+namespace Resty\Loggy\Tests;
 
-use Mostofreddy\Loggy\Logger;
-use Mostofreddy\Loggy\Handler\Dummy;
+use Resty\Loggy\Logger;
+use Resty\Loggy\Handler\Dummy;
 // PSR
 use Psr\Log\LoggerInterface;
 // PHPUnit
@@ -26,8 +26,8 @@ use PHPUnit\Framework\TestCase;
 /**
  * LoggerTest
  *
- * @category  Mostofreddy\Loggy
- * @package   Mostofreddy\Loggy\Tests
+ * @category  Loggy
+ * @package   Loggy\Tests
  * @author    Federico Lozada Mosto <mosto.federico@gmail.com>
  * @copyright 2016 Federico Lozada Mosto <mosto.federico@gmail.com>
  * @license   MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -61,7 +61,7 @@ class LoggerTest extends TestCase
     public function testGet()
     {
         $logger = Logger::get("myChannel", static::$handlers);
-        $this->assertInstanceOf('\Mostofreddy\Loggy\Logger', $logger);
+        $this->assertInstanceOf('\Resty\Loggy\Logger', $logger);
     }
     /**
      * Test generateUid method. Testea que devuelva el mismo uid en invocaciones sucesivas
@@ -70,7 +70,7 @@ class LoggerTest extends TestCase
      */
     public function testGenerateUidEquals()
     {
-        $ref = new \ReflectionMethod('\Mostofreddy\Loggy\Logger', 'generateUid');
+        $ref = new \ReflectionMethod('\Resty\Loggy\Logger', 'generateUid');
         $ref->setAccessible(true);
         $uid1 = $ref->invoke(null);
         $uid2 = $ref->invoke(null);
@@ -84,7 +84,7 @@ class LoggerTest extends TestCase
      */
     public function testGenerateUidLength()
     {
-        $ref = new \ReflectionMethod('\Mostofreddy\Loggy\Logger', 'generateUid');
+        $ref = new \ReflectionMethod('\Resty\Loggy\Logger', 'generateUid');
         $ref->setAccessible(true);
         $uid = $ref->invoke(null);
         $this->assertEquals(32, strlen($uid));
@@ -98,7 +98,7 @@ class LoggerTest extends TestCase
     {
         $logger = Logger::get("myChannel", static::$handlers);
 
-        $ref = new \ReflectionMethod('\Mostofreddy\Loggy\Logger', 'generateUid');
+        $ref = new \ReflectionMethod('\Resty\Loggy\Logger', 'generateUid');
         $ref->setAccessible(true);
         $uid = $ref->invoke(null);
 
