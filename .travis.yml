@@ -6,7 +6,7 @@ php:
 before_script:
   - composer self-update
   - composer install
-  - cp phpcs.ruleset.xml.dist phpcs.ruleset.xml
+  - cp ruleset.xml.dist ruleset.xml
 
 script:
   # - mkdir -p build/logs
