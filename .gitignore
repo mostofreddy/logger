@@ -3,8 +3,7 @@ vendor
 
 # Unit tests
 tests/coverage
-clover.xml
 
 # QA
 phpunit.xml
-phpcs.ruleset.xml
+ruleset.xml
