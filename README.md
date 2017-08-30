@@ -1,5 +1,4 @@
-Loggy
-======
+![Resty - Loggy](https://mostofreddy.github.io/loggy/images/resty_loggy_logo.png)
 
 [![Build Status](https://travis-ci.org/mostofreddy/loggy.svg?branch=master)](https://travis-ci.org/mostofreddy/loggy)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mostofreddy/loggy/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mostofreddy/loggy/?branch=master)
@@ -9,12 +8,12 @@ Loggy
 [![Total Downloads](https://poser.pugx.org/mostofreddy/loggy/downloads.svg)](https://packagist.org/packages/mostofreddy/loggy)
 [![composer.lock](https://poser.pugx.org/mostofreddy/loggy/composerlock)](https://packagist.org/packages/mostofreddy/loggy)
 
-Logger simple y liviano, PSR-3 compatible.
+Logger simple y liviano, PSR-3 compatible y agnostico a cualquier Framework
 
 Versión
 -------
 
-__1.1.3__
+__2.0.0__
 
 Requerimientos
 --------------
@@ -27,7 +26,7 @@ Instalación
 ```
 {
     "require": {
-        "mostofreddy/loggy": "1.1.*"
+        "restyphp/loggy": "2.0.*"
     }
 }
 ```

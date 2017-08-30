@@ -1,6 +1,10 @@
 Changelog
 =========
 
+__2.0.0__
+
+* Cambio nombre namespace
+
 __1.1.3__
 
 
