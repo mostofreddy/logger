@@ -13,7 +13,7 @@ Logger simple y liviano, PSR-3 compatible y agnostico a cualquier Framework
 Versión
 -------
 
-__2.0.0__
+__2.0.1__
 
 Requerimientos
 --------------
