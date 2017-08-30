@@ -1,7 +1,7 @@
 {
-    "name": "mostofreddy/loggy",
+    "name": "restyphp/loggy",
     "description": "Logger simple y liviano, PSR-3 compatible y agnostico a cualquier Framework",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "keywords": ["logger", "log", "logging", "psr-3", "loggy"],
     "homepage": "https://github.com/mostofreddy/logger",
     "type": "library",
