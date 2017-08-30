@@ -1,5 +1,4 @@
-Loggy
-======
+![Resty - Loggy](https://mostofreddy.github.io/loggy/images/resty_loggy_logo.png)
 
 [![Build Status](https://travis-ci.org/mostofreddy/loggy.svg?branch=master)](https://travis-ci.org/mostofreddy/loggy)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mostofreddy/loggy/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mostofreddy/loggy/?branch=master)
